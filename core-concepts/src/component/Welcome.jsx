@@ -1,7 +1,7 @@
-const Welcome = () => {
+const Welcome = (props) => {
   return (
     <div>
-      <h1>Hello World</h1>
+      <h1>Welcome {props.name}</h1>
     </div>
   )
 }

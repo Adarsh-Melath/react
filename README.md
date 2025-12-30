@@ -102,3 +102,22 @@ export const HelloWithJsx = () => {
 
 -   Rule #3: Attribute names must be written in camelCase
 
+## Props(Properties)
+
+-   A parent component can pass data down to its children through props
+
+                   App(parent)
+                        |
+                        |props
+                        |
+                    Welcome(child)
+
+```jsx
+const Welcome = (props) => {
+    return (
+        <div>
+            <h1>Welcome {props.name}</h1>
+        </div>
+    );
+};
+```
