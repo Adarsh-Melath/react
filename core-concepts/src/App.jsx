@@ -1,20 +1,5 @@
 import React from "react";
 
-
-const Welcome = () => {
-  return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
-  )
-}
-
-const Button = () => {
-  return (
-    <button>Click Me</button>
-  )
-}
-
 const App = () => {
   return (
     <div>
