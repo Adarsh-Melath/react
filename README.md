@@ -80,3 +80,25 @@ export const HelloWithoutJsx = () => {
     );
 };
 ```
+
+## Rules of JSX
+
+-   Rule #1: Every component must return a single root element
+
+```jsx
+export const HelloWithJsx = () => {
+    return (
+        <div id="container">
+            <h1>Hello Adarsh</h1>
+            <p>I am a Java Dev </p>
+        </div>
+    );
+};
+```
+
+-   here we wrapped h1 and p tag with div tag
+
+-   Rule #2: Every single tag must be properly closed
+
+-   Rule #3: Attribute names must be written in camelCase
+
