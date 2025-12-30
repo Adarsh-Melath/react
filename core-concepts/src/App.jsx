@@ -1,11 +1,13 @@
 import React from "react";
 import Welcome from "./component/Welcome";
 import Button from "./component/Button";
+import { HelloWithJsx, HelloWithoutJsx } from "./component/Hello";
 
 const App = () => {
   return (
     <div>
-      <h1>React Core Concepts</h1>
+      <HelloWithJsx />
+      <HelloWithoutJsx />
       <Welcome></Welcome>
       <Button></Button>
     </div>

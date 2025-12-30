@@ -38,5 +38,45 @@ import React from "react";
 -   Organizing components into separate files makes your code more maintainable.
 -   Each Component has its own space,and you can easily find and update components as your app grows.
 
-- This modular approach means you can reuse components across different parts of your app just by importing them.
+-   This modular approach means you can reuse components across different parts of your app just by importing them.
 
+## JSX
+
+-   JSX is a syntax extension for JS that lets us write markup that looks similar to HTML,but with the full power of JavaScript behind it.
+
+-   Example
+
+```jsx
+export const HelloWithJsx = () => {
+    return (
+        <div id="container">
+            <h1>Hello Adarsh</h1>
+        </div>
+    );
+};
+```
+
+## React without JSX
+
+-   _createElement()_
+    -This createElement method needs at least three arguments:
+
+    -   1. The HTML element to be rendered(as a string)
+
+    -   2. Any properties/attributes for that element(or null if there are't any)
+
+    -   3. The children of that element
+
+-   Example
+
+```js
+export const HelloWithoutJsx = () => {
+    return React.createElement(
+        'div',
+        {
+            id: 'container',
+        },
+        React.createElement('h6', null, 'Hello Adarsh')
+    );
+};
+```
