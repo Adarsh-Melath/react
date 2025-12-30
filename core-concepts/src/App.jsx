@@ -1,4 +1,6 @@
 import React from "react";
+import Welcome from "./component/Welcome";
+import Button from "./component/Button";
 
 const App = () => {
   return (

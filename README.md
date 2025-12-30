@@ -33,3 +33,10 @@ import React from "react";
     }
 ```
 
+## Importing and Exporting Components
+
+-   Organizing components into separate files makes your code more maintainable.
+-   Each Component has its own space,and you can easily find and update components as your app grows.
+
+- This modular approach means you can reuse components across different parts of your app just by importing them.
+
