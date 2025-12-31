@@ -121,3 +121,118 @@ const Welcome = (props) => {
     );
 };
 ```
+
+## Props pattern
+
+-   Default props
+
+        -   the default value is only if the prop is missing or if you pass undefined
+
+        -   if you pass null or 0,the default value wont be used
+
+        -   example:
+
+            in App.jsx
+
+            ```jsx
+            <Greeting name="Adarsh" message="Good Morning!"></Greeting>
+            <Greeting message="Welcome"></Greeting>
+            <Greeting name="Adarsh" ></Greeting>
+            <Greeting></Greeting>
+
+            ```
+
+            in Greeting jsx
+
+            ```jsx
+                export const Greeting = ({ name = "Guest", message = "Hello" }) => {
+
+                return (
+                    <>
+                    <h2>{message} {name}</h2>
+                    </>
+                )
+                }
+
+             ```
+
+-   Forwarding props with spread operator
+
+            -   example:
+
+                in App.jsx
+
+                ```jsx
+                <UserCard
+                    name="Adarsh"
+                    age={18}
+                    city={'Berlin'}
+                    email={'adarsh123@gmail.com'}
+                ></UserCard>
+                ```
+
+                in UserCard.jsx
+
+                ```jsx
+
+                import { UserInfo } from "./UserInfo"
+
+    export const UserCard = (props) => {
+    return (
+    <>
+    <h2>User Details</h2>
+    <UserInfo {...props}></UserInfo>
+    </>
+    )
+    }
+
+```
+            in UserInfo.jsx
+
+            ``` jsx
+                export const UserInfo = ({ name, age, city, email }) => {
+                    return (
+                        <div>
+                        <h3>{name}</h3>
+                        <p>Age: {age}</p>
+                        <p>City: {city}</p>
+                        <p>Email: {email}</p>
+                        </div>
+                    )
+                }
+```
+
+-   Passing JSX as children
+
+    -   in HTML,you knwo that it is natural to nest elements inside each other
+
+    -   In React ,you can do the exact same thing with components
+
+    -   exmaple :
+
+        in App.jsx
+
+              ```jsx
+                   <CardWrapper title="User Profile">
+
+          <p>Adarsh</p>
+          <p>adarshmelath1305@gmail.com</p>
+          <button>Edit profile</button>
+        </CardWrapper>
+
+```
+        in CardWrapper.jsx
+
+        ```jsx
+            export const CardWrapper = ({ title, children }) => {
+  return (
+    <div className="card">
+      <h1>{title}</h1>
+      <div className="card-content">
+        {children}
+      </div>
+    </div>
+  )
+}
+        ```
+
