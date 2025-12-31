@@ -203,13 +203,13 @@ const Welcome = (props) => {
 
 -   Passing JSX as children
 
-        -   in HTML,you knwo that it is natural to nest elements inside each other
+    -   in HTML,you knwo that it is natural to nest elements inside each other
 
-        -   In React ,you can do the exact same thing with components
+    -   In React ,you can do the exact same thing with components
 
-        -   exmaple :
+    -   exmaple :
 
-        in App.jsx
+    in App.jsx
 
         ```jsx
             <CardWrapper title="User Profile">
@@ -218,17 +218,16 @@ const Welcome = (props) => {
             <button>Edit profile</button>
             </CardWrapper>
         ```
-        in CardWrapper.jsx
 
-        ```jsx
-            export const CardWrapper = ({ title, children }) => {
-                return (
-                    <div className="card">
-                        <h1>{title}</h1>
-                        <div className="card-content">
-                            {children}
-                        </div>
-                    </div>
-                )
-            }
-        ```
+    in CardWrapper.jsx
+
+    ```jsx
+    export const CardWrapper = ({ title, children }) => {
+        return (
+            <div className="card">
+                <h1>{title}</h1>
+                <div className="card-content">{children}</div>
+            </div>
+        );
+    };
+    ```
