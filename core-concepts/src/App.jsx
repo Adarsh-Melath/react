@@ -7,10 +7,12 @@ import { Greeting } from "./component/Greeting";
 import { UserCard } from "./component/UserCard";
 import { CardWrapper } from "./component/CardWrapper";
 import { UserDetails } from "./component/UserDetails";
+import { ProductList } from "./component/ProductList";
 const App = () => {
   return (
     <div>
-      <UserDetails name="Adarsh" isOnline={true} isPremium={false}></UserDetails>
+      <ProductList></ProductList>
+      {/* <UserDetails name="Adarsh" isOnline={true} isPremium={false}></UserDetails> */}
       {/* <CardWrapper title="User Profile">
         <p>Adarsh</p>
         <p>adarshmelath1305@gmail.com</p>

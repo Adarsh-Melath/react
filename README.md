@@ -318,3 +318,12 @@ const Welcome = (props) => {
     ```
 
     -   variables :Best for complex logic that would make your JSX messy.
+
+## Key prop
+
+-   when we render a list of elements,we need to add a key prop to each element with a unique value within the list.
+
+## Why does React need key?
+
+-   Keys are used by React to track the items in the list.
+-   They're crucial for React to efficiently update the UI.
