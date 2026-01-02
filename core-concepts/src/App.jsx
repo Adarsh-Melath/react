@@ -6,15 +6,16 @@ import { Person } from "./component/Person";
 import { Greeting } from "./component/Greeting";
 import { UserCard } from "./component/UserCard";
 import { CardWrapper } from "./component/CardWrapper";
+import { UserDetails } from "./component/UserDetails";
 const App = () => {
   return (
     <div>
-
-      <CardWrapper title="User Profile">
+      <UserDetails name="Adarsh" isOnline={true} isPremium={false}></UserDetails>
+      {/* <CardWrapper title="User Profile">
         <p>Adarsh</p>
         <p>adarshmelath1305@gmail.com</p>
         <button>Edit profile</button>
-      </CardWrapper>
+      </CardWrapper> */}
       {/* <UserCard name="Adarsh" age={18} city={"Berlin"} email={"adarsh123@gmail.com"}></UserCard> */}
       {/* <Greeting name="Adarsh" message="Good Morning!"></Greeting>
       <Greeting message="Welcome"></Greeting>

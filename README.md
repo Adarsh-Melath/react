@@ -231,3 +231,90 @@ const Welcome = (props) => {
         );
     };
     ```
+
+## Condition rendering
+
+-   Conditional rendering is how we make our components show different content based on different conditions
+
+-   example
+
+    -   show a login button if the user isn't logged in
+
+    -   show their profile if they are logged in
+
+-   4 ways of conditional rendering
+
+    -   if statements : Great for completely different renders or returning null.
+
+    -   example:
+
+    ```jsx
+    export const UserDetails = ({ name, isOnline }) => {
+        if (isOnline === true) {
+            return (
+                <div>
+                    <h3>Name: {name}</h3>
+                    <p>Status: Online</p>
+                </div>
+            );
+        } else {
+            return (
+                <div>
+                    <h3>Name: {name}</h3>
+                    <p>Status: Offline</p>
+                </div>
+            );
+        }
+    };
+    ```
+
+    -   ternary operator(?:) : Perfect for either/or situations
+
+    -   example
+
+    ```jsx
+    export const UserDetails = ({ name, isOnline }) => {
+        return (
+            <div>
+                <h3>{name}</h3>
+                <span>{isOnline ? 'Online' : 'Offline'}</span>
+                <p>
+                    {isOnline ? 'Available for chat' : 'Not available for chat'}
+                </p>
+                {isOnline ? (
+                    <button>Send message</button>
+                ) : (
+                    <small>Check back later</small>
+                )}
+            </div>
+        );
+    };
+    ```
+
+    -   AND operator(&&) : Ideal for show/hide scenarios
+
+    -   example
+
+    ```jsx
+    export const UserDetails = ({ name, isOnline, isPremium }) => {
+        return (
+            <div>
+                <h3>
+                    {name}
+                    {isPremium && <span>⭐</span>}
+                </h3>
+                <span>{isOnline ? 'Online' : 'Offline'}</span>
+                <p>
+                    {isOnline ? 'Available for chat' : 'Not available for chat'}
+                </p>
+                {isOnline ? (
+                    <button>Send message</button>
+                ) : (
+                    <small>Check back later</small>
+                )}
+            </div>
+        );
+    };
+    ```
+
+    -   variables :Best for complex logic that would make your JSX messy.
