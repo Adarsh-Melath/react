@@ -8,10 +8,13 @@ import { UserCard } from "./component/UserCard";
 import { CardWrapper } from "./component/CardWrapper";
 import { UserDetails } from "./component/UserDetails";
 import { ProductList } from "./component/ProductList";
+import { NameList } from "./component/NameList";
 const App = () => {
   return (
     <div>
-      <ProductList></ProductList>
+
+      <NameList></NameList>
+      {/* <ProductList></ProductList> */}
       {/* <UserDetails name="Adarsh" isOnline={true} isPremium={false}></UserDetails> */}
       {/* <CardWrapper title="User Profile">
         <p>Adarsh</p>

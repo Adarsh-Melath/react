@@ -327,3 +327,9 @@ const Welcome = (props) => {
 
 -   Keys are used by React to track the items in the list.
 -   They're crucial for React to efficiently update the UI.
+
+## Using array index as key(anti pattern)
+
+-   The problem with using as a key is that the index represents the position and not the item itself
+
+-   That can lead to subtle and confusing bufs when the order of the items changes in the list.
