@@ -9,11 +9,23 @@ import { CardWrapper } from "./component/CardWrapper";
 import { UserDetails } from "./component/UserDetails";
 import { ProductList } from "./component/ProductList";
 import { NameList } from "./component/NameList";
+import { Alert } from "./component/Alert";
+import { NewButton } from "./component/NewButton";
+import { CustomBtn } from "./component/CustomeBtn";
+import { NewsLetter } from "./component/NewsLetter";
+import { Contact } from "./component/Contact";
+import { Menu } from "./component/Menu";
 const App = () => {
   return (
     <div>
-
-      <NameList></NameList>
+      <Menu />
+      {/* <NewsLetter />
+      <Contact /> */}
+      {/* <CustomBtn /> */}
+      {/* <Alert >Your changes have been save!</Alert>
+      <Alert type="error">Something went wrong !</Alert>
+      <NewButton /> */}
+      {/* <NameList></NameList> */}
       {/* <ProductList></ProductList> */}
       {/* <UserDetails name="Adarsh" isOnline={true} isPremium={false}></UserDetails> */}
       {/* <CardWrapper title="User Profile">
