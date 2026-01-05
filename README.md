@@ -333,3 +333,22 @@ const Welcome = (props) => {
 -   The problem with using as a key is that the index represents the position and not the item itself
 
 -   That can lead to subtle and confusing bufs when the order of the items changes in the list.
+
+## state
+
+-   state is a component's memory
+-   It is special data that:
+    -   1: Triggers a re-render when it changes(solving our screen update problem)
+    -   2:Persists btw renders (solving our reset problem)
+
+## props vs state
+
+-   props
+
+    -   are like arguments passed to a function
+    -   come from outside and you can't change them
+
+-   state
+
+    -   is like the component's personal memory
+    -   belongs to the component and the component can change it.
